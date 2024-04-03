@@ -18,11 +18,16 @@
         <option value="lupin">Lupin</option>
         <option value="aladin">Aladin</option>
     </select><br><br>
-    <button>Pinjam Buku</button>
+    <button onclick="pinjamBuku()">Pinjam Buku</button>
     <script>
         function pinjamBuku() {
             let jumlah = document.getElementById("jumlah").value;
             let buku = document.getElementById("buku").value;
+
+            if (jumlah === "" || isNaN(jumlah)) {
+                alert("Jumlah harus diisi dengan angka.");
+                return;
+            }
         }
 
         let daftarBuku = [
