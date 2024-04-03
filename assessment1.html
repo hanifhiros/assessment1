@@ -28,6 +28,19 @@
                 alert("Jumlah harus diisi dengan angka.");
                 return;
             }
+
+            let bukuDitemukan = false;
+            for (let i = 0; i < daftarBuku.length; i++) {
+                if (daftarBuku[i].nama === buku) {
+                    bukuDitemukan = true;
+                    alert("Buku ditemukan.");
+                    break;
+                }
+            }
+
+            if (!bukuDitemukan) {
+                alert("Buku tidak ditemukan.");
+            }
         }
 
         let daftarBuku = [
